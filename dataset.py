@@ -36,7 +36,7 @@ class SignalDataset(Dataset):
     def __getitem__(self, idx):
         signal_row = self.metadata.iloc[idx, :]
         
-        subset_dir = signal_row['SubsetDir']
+        subset_dir = signal_row['Dataset']
         signal_dir = signal_row['SignalName']
         device = signal_row['Device']
         filename = signal_row.name.split('.')[0]+'.npz'
